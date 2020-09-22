@@ -8,25 +8,22 @@
     <button v-on:click="reverseMessage">메시지 뒤집기</button>
     <input v-model="message" />
     <HelloWorld :msg="안녕하세요"></HelloWorld>
+    <Event :pageH1="eventH1"></Event>
+    <Event :pageH1="'이건 H2'"></Event>
   </div>
 </template>
 
 <script>
 // // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import Event from "@/views/Event.vue";
 
 export default {
   name: "Home",
-  components: { HelloWorld },
+  components: { HelloWorld, Event },
   data() {
     return {
-      message: "안녕하세요! Vue.js!",
-      seen: true,
-      todos: [
-        { text: "JavaScript 배우기" },
-        { text: "Vue 배우기" },
-        { text: "무언가 멋진 것을 만들기" }
-      ]
+      eventH1: "이건 EvenH1"
     };
   },
   methods: {
