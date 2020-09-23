@@ -1,10 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import playGround from "../views/playGround.vue";
-import ForIf from "../views/Forif.vue";
-import ListPage from "../views/ListPage.vue";
-import Event from "../views/Event.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,11 +8,12 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-  },
-  {
-    path: "/play",
-    name: "play",
-    component: playGround,
+    children: [
+      {
+        path: "/",
+        component: () => import("../views/main/Main.vue"),
+      },
+    ],
   },
   {
     path: "/about",
@@ -26,21 +23,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
-  {
-    path: "/ForIf",
-    name: "ForIf",
-    component: ForIf,
-  },
-  {
-    path: "/list",
-    name: "List",
-    component: ListPage,
-  },
-  {
-    path: "/Event",
-    name: "Event",
-    component: Event,
   },
 ];
 

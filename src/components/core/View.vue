@@ -1,12 +1,13 @@
 <template>
-  <div class="home"></div>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
 // // @ is an alias to /src
-
 export default {
-  name: "playGround",
+  name: "CoreView",
   components: {},
   data() {
     return {};
