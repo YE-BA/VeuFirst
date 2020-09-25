@@ -13,3 +13,10 @@ export default {
   })
 };
 </script>
+<style lang="scss">
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+}
+</style>

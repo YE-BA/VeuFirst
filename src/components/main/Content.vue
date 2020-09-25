@@ -1,6 +1,9 @@
 <template>
   <div class="main-content">
-    <v-img :src="require('../../assets/banner/banners.jpg')" min-height="485"></v-img>
+    <v-img
+      :src="require('../../assets/banner/banners.jpg')"
+      min-height="485"
+    ></v-img>
     <div class="textwrap">
       <div class="flex-item">WELCOME TO</div>
       <div class="flex-item big">VUETIFY</div>
@@ -19,7 +22,7 @@ export default {
   methods: {}
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .main-content {
   display: flex;
   flex-flow: row wrap;
@@ -28,14 +31,16 @@ export default {
 }
 .textwrap {
   position: absolute;
-  border: 1px solid red;
 }
 .flex-item {
   font-size: 50px;
   color: white;
   text-align: center;
+  font-weight: 100;
 }
 .big {
+  font-size: 100px;
   font-weight: bold;
+  margin-top: -40px;
 }
 </style>
